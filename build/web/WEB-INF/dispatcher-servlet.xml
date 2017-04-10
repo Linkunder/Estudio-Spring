@@ -21,9 +21,7 @@
         <property name="mappings">
             <props>
                 <prop key="index.htm">indexController</prop>
-                <prop key="home.htm">homeController</prop>
-                <prop key="nosotros.htm">homeController</prop>
-                <prop key="parametros.htm">homeController</prop>
+                <prop key="home.htm">homeController</prop>            
             </props>
         </property>
     </bean>
@@ -37,9 +35,10 @@
     The index controller.
     Un bean por cada controlador que se quiere tener
     -->
+    <bean name="homeController" class="controller.HomeController"/>
     <bean name="indexController"
           class="org.springframework.web.servlet.mvc.ParameterizableViewController"
           p:viewName="index" />
-    <bean name="homeController" class="controller.HomeController"/>
+    
 
 </beans>

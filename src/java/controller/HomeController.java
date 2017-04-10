@@ -8,48 +8,29 @@ package controller;
 import javax.servlet.http.HttpServletRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.portlet.ModelAndView;
+import org.springframework.web.servlet.ModelAndView;
 
-/**
- *
- * @author Linkunder
- */
 @Controller
-
-public class HomeController 
-{
+public class HomeController {
+    
+  
     
     @RequestMapping("home.htm")
-    public ModelAndView home()
+    public ModelAndView home( HttpServletRequest request )
     {
-        ModelAndView mav = new ModelAndView();
-        //Se setea el nombre de la vista al ModelAndView
+        ModelAndView mav =new ModelAndView( );
         mav.setViewName("home");
+        String id =request.getParameter("id");
+        String id2=request.getParameter("id2");
+        mav.addObject("id", id);
+        mav.addObject("id2", id2);
         return mav;
     }
-    @RequestMapping("nosotros.htm")
+     @RequestMapping("nosotros.htm")
     public ModelAndView nosotros()
     {
-        ModelAndView mav = new ModelAndView();
-        //Se setea el nombre de la vista al ModelAndView
-        //This sets the name to the view
-        mav.setViewName("nosotros");
+        ModelAndView mav =new ModelAndView();
+        mav.setViewName("home/nosotros");
         return mav;
     }
-    
-    @RequestMapping("parametros.htm")
-    public ModelAndView parametros(HttpServletRequest request)
-    {
-         
-        ModelAndView mav = new ModelAndView();
-        mav.setViewName("parametros");
-        //Valores por get
-        String id = request.getParameter("id");
-        String nombre = request.getParameter("nombre");
-        mav.addObject("id", id);
-        mav.addObject("nombre", nombre);
-        return mav;
-    }
-    
-    
 }
