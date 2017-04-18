@@ -9,9 +9,9 @@
 <html>
     <head>
         <meta charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Segunda Página</title>
     </head>
     <body>
-        <h1>Nosotros</h1>
+        <h1>Nuevo id: ${id} </h1>
     </body>
 </html>

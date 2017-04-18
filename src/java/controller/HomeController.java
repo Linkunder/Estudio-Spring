@@ -26,11 +26,13 @@ public class HomeController {
         mav.addObject("id2", id2);
         return mav;
     }
-     @RequestMapping("nosotros.htm")
-    public ModelAndView nosotros()
+    @RequestMapping("nosotros.htm")
+    public ModelAndView nosotros(HttpServletRequest request)
     {
         ModelAndView mav =new ModelAndView();
-        mav.setViewName("home/nosotros");
+        mav.setViewName("nosotros");
+        String id= request.getParameter("id");
+        mav.addObject("id", id);
         return mav;
     }
 }

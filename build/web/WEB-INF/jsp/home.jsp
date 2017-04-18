@@ -14,7 +14,7 @@
     <body>
         <h1>Recupeción de Parámetros</h1>
         <ul>
-            <li>ID = <c:out value="${id}" /></li>
+            <li>ID = ${id} </li>
             <li>ID2 = ${id2}</li>
         </ul>
     </body>

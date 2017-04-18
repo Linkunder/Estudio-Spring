@@ -21,7 +21,8 @@
         <property name="mappings">
             <props>
                 <prop key="index.htm">indexController</prop>
-                <prop key="home.htm">homeController</prop>            
+                <prop key="home.htm">homeController</prop>     
+                <prop key="nosotros.htm">homeController</prop>       
             </props>
         </property>
     </bean>
